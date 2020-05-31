@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
+import androidx.core.widget.addTextChangedListener
 import kotlinx.android.synthetic.main.fragment_blank.*
 
 class BlankFragment : Fragment() {
@@ -42,6 +43,11 @@ class BlankFragment : Fragment() {
             spn_after_convert.adapter = adapter
         }
 
+        createdFirstSpinnerListener()
+        edt_input_num.addTextChangedListener { convertWithInputParameters() }
+    }
+
+    private fun createdFirstSpinnerListener() {
         spn_before_convert.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             override fun onNothingSelected(parent: AdapterView<*>?) {
                 TODO("Not yet implemented")
@@ -53,7 +59,9 @@ class BlankFragment : Fragment() {
                 selectedUnit = saveInputToConvertParameters(position)
             }
         }
+    }
 
+    private fun convertWithInputParameters() {
         spn_after_convert.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             override fun onNothingSelected(parent: AdapterView<*>?) {
                 TODO("Not yet implemented")
