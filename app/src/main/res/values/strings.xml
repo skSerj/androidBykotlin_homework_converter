@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Kotlin_homework_converter</string>
+    <string name="selected_unit_for_conversion">Selected item:</string>
+    <string-array name="Units_for_conversion">
+        <item>миллиметр</item>
+        <item>сантиметр</item>
+        <item>дециметр</item>
+        <item>метр</item>
+    </string-array>
+    <string name="selected_converted_unit">Selected item:</string>
+    <string-array name="converted_unit">
+        <item>миллиметр</item>
+        <item>сантиметр</item>
+        <item>дециметр</item>
+        <item>метр</item>
+    </string-array>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
